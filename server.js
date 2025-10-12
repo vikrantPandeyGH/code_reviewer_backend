@@ -1,5 +1,4 @@
 import app from "./src/app.js";
-import connect from "./src/db/db.js";
 import http from "http";
 import messagemodel from "./src/models/message.model.js";
 import projectModel from "./src/models/project.model.js";
@@ -8,7 +7,7 @@ import { codereviewer } from "./src/services/ai.service.js";
 import { constrainedMemory } from "process";
 
 
-connect();
+
 
 const server = http.createServer(app);
 const io = new SocketServer(server, {
@@ -64,6 +63,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3000, function () {
-  console.log("server is running on port 3000");
-});
+// server.listen(3000, function () {
+//   console.log("server is running on port 3000");
+// });
