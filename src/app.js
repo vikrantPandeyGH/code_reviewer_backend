@@ -1,6 +1,6 @@
 import express from 'express'
 const app = express()
-import {connectedToDB} from './db/db.js'
+import {connectToDB} from './db/db.js'
 import projectroutes from './routes/project.routes.js'
 import cors from 'cors'
 import dotenv from 'dotenv'
